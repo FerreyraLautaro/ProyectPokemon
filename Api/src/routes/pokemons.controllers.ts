@@ -4,7 +4,7 @@ import Pokemon from "./pokemon"
 export const createPokemon: RequestHandler = async (req, res) => {
     const body = req.body
     const pokemonFound = await Pokemon.findOne({url: body.url})
-    if(pokemonFound) return res.status(301).json({message: 'The IMG already Exist'})
+    if(pokemonFound) return res.status(301).json({message: 'The IMG already Existing'})
 
     try {
         const pokemon = new Pokemon(body)
