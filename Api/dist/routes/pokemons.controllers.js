@@ -16,7 +16,7 @@ exports.updatePokemon = exports.deletePokemon = exports.getPokemon = exports.get
 const pokemon_1 = __importDefault(require("./pokemon"));
 const createPokemon = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const body = req.body;
-    const pokemonFound = yield pokemon_1.default.findOne({ url: body.url });
+    const pokemonFound = yield pokemon_1.default.findOne({ img: body.img });
     if (pokemonFound)
         return res.status(301).json({ message: 'The IMG already Existing' });
     try {
