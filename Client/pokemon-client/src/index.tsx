@@ -6,6 +6,7 @@ import { Routes , Route , BrowserRouter } from "react-router-dom"
 import PokemonsRender from './components/Pokemons/PokemonsRender';
 import PokemonForm from './components/Pokemons/VideoForm';
 import Example from './components/Pokemons/example';
+import NavBar from './components/NavBar/NavBar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,11 +14,16 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <NavBar/>
+    <div className='bg-gray-200'>
+      <div className='flex container'>
       <Routes>
         <Route path='/example' element={<Example/>}/>
         <Route path="/" element={<PokemonsRender/>} />
         <Route path="/new-pokemon" element={<PokemonForm/>} />
       </Routes>
+      </div>
+    </div>
     </BrowserRouter>
   </React.StrictMode>
 );

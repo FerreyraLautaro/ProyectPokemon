@@ -17,11 +17,14 @@ const PokemonsRender = () => {
     }, [])
 
     return(
-        <div>
+        <div className="flex mt-6">
+            <div className="group relative">
             {pokemons.map(pokemon => {
-                return <PokemonItem pokemon={pokemon}/>
+                return (<PokemonItem pokemon={pokemon}/>)
             })}
+            </div>
         </div>
+ 
     )
 }
 
