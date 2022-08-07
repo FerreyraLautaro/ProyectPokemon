@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { Routes , Route , BrowserRouter } from "react-router-dom"
 import PokemonsRender from './components/Pokemons/PokemonsRender';
 import PokemonForm from './components/Pokemons/VideoForm';
+import Example from './components/Pokemons/example';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,6 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path='/example' element={<Example/>}/>
         <Route path="/" element={<PokemonsRender/>} />
         <Route path="/new-pokemon" element={<PokemonForm/>} />
       </Routes>
