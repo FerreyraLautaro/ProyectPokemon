@@ -17,13 +17,17 @@ const PokemonsRender = () => {
     }, [])
 
     return(
-        <div className="flex mt-6">
-            <div className="group relative">
+        <div className="container mx-8">
+        <div className="grid grid-cols-4 gap-8 place-items-center place-content-center py-7">
+
             {pokemons.map(pokemon => {
                 return (<PokemonItem pokemon={pokemon}/>)
             })}
-            </div>
+
         </div>
+            
+        </div>
+
  
     )
 }

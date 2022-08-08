@@ -15,14 +15,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <NavBar/>
-    <div className='bg-gray-200'>
-      <div className='flex container'>
+    <div className='flex justify-center'>
+
       <Routes>
         <Route path='/example' element={<Example/>}/>
         <Route path="/" element={<PokemonsRender/>} />
         <Route path="/new-pokemon" element={<PokemonForm/>} />
       </Routes>
-      </div>
+
     </div>
     </BrowserRouter>
   </React.StrictMode>

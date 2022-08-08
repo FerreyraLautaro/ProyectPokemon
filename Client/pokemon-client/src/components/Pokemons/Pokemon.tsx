@@ -6,22 +6,19 @@ interface Props {
 }
 
 const PokemonItem = ({pokemon}: Props) => {
-    return (<div>
-        <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-          <img src={`${pokemon.img}`} alt="Front of men&#039;s Basic Tee in black." className="w-full h-full object-center object-cover lg:w-full lg:h-full"/>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                {pokemon.name}
-              </a>
-            </h3>
-          </div>
-          <p className="text-sm font-medium text-gray-900">Type: {pokemon.type}</p>
-        </div>
-    </div>
+    return (
+                  <div className="grid grid-cols-2 w-60 rounded-b-xl place-items-center bg-cyan-100 border-black  border shadow-xl">
+                    <div className="col-span-2 w-30 h-60 overflow-auto bg-black">
+                    <img className="rounded-t-xl border-b-2 border-black w-30 h-60 object-cover" src={`${pokemon.img}`} alt="" />
+                    </div>
+                    <h1 className="col-span-2 bg-cyan-600 font-bold border border-separate">{pokemon.name}</h1>
+                    <h2 className="col-span-2">Type: {pokemon.type}</h2>
+                    <p className="border-b-2 border-black">stats1</p>
+                    <p className="border-b-2 border-black">stats4</p>
+                    <p className="border-b-2 border-black">stats3</p>
+                    <p className="border-b-2 border-black">stats2</p>
+                </div>
+    
     )
 }
 
